@@ -18,9 +18,6 @@ class ChannelList extends Component {
   }
 
   renderChannel = (channel) => {
-    console.log(channel);
-    console.log('---');
-    console.log(this.props.selectedChannel);
     return (
       <li
         key={channel}

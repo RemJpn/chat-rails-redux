@@ -2,6 +2,7 @@ import React from 'react';
 import { emojify } from 'react-emojione';
 
 function strToRGB(str) {
+  if (!str) return '#000000';
   let hash = 0;
   for (let i = 0; i < str.length; i += 1) {
     hash = str.charCodeAt(i) + ((hash << 5) - hash);
