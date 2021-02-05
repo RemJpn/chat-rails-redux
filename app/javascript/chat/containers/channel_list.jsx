@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { selectChannel, fetchMessages } from '../actions/index';
+import { Link } from 'react-router-dom';
 
 class ChannelList extends Component {
   componentWillReceiveProps(nextProps) {
@@ -17,6 +18,9 @@ class ChannelList extends Component {
   }
 
   renderChannel = (channel) => {
+    console.log(channel);
+    console.log('---');
+    console.log(this.props.selectedChannel);
     return (
       <li
         key={channel}
@@ -24,7 +28,9 @@ class ChannelList extends Component {
         onClick={() => this.handleClick(channel)}
         role="presentation"
       >
-        #{channel}
+        <Link to={`/channels/${channel}`}>
+          #{channel}
+        </Link>
       </li>
     );
   }
