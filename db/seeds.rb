@@ -17,9 +17,9 @@ paris = Channel.create!( name: "paris")
 react = Channel.create!( name: "react")
 
 puts "Seeding users"
-robert = User.create!( email: "rob@tracteur.com", password: "123456")
-jeanmi = User.create!( email: "jeanmi@tunnning.com", password: "123456")
-justin = User.create!( email: "justin@crymeariver.com", password: "123456")
+robert = User.create!( email: "rob@tracteur.com", password: "123456", nickname: "Robi")
+jeanmi = User.create!( email: "jeanmi@tunnning.com", password: "123456", nickname: "JeanMimi")
+justin = User.create!( email: "justin@crymeariver.com", password: "123456", nickname: "Lover42")
 
 puts "Seeding messages"
 message1 = Message.new(content: "Cool ce site")

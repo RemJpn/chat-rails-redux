@@ -29,7 +29,7 @@ class Api::V1::MessagesController < ApplicationController
   def prepare_for_api(message)
     {
       id: message.id,
-      author: User.find(message.user_id).email,
+      author: User.find(message.user_id).nickname,
       content: message.content,
       created_at: message.created_at
     }
